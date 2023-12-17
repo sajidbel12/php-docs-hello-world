@@ -27,9 +27,9 @@ if ($car) {
     <body>
         <div>
             <h1>Détails du Médecin</h1>
-            <p>id du médecin: <?php echo $medecin['carName']; ?></p>
-            <p>Disponibilité: <?php echo $medecin['disponibilite']; ?></p>
-            <img src="<?php echo $room['imageDoc'] . 'sp=r&st=2023-12-17T17:19:00Z&se=2023-12-21T01:19:00Z&spr=https&sv=2022-11-02&sr=c&sig=ye5GJdRAGjTlXBoCenOhk5kdz64oTF2Ydzz28%2BNflv0%3D'; ?>" alt="Image du voiture">
+            <p>id du médecin: <?php echo $car['carName']; ?></p>
+            <p>Disponibilité: <?php echo $car['disponibilite']; ?></p>
+            <img src="<?php echo $car['imagePath'] . 'sp=r&st=2023-12-17T17:19:00Z&se=2023-12-21T01:19:00Z&spr=https&sv=2022-11-02&sr=c&sig=ye5GJdRAGjTlXBoCenOhk5kdz64oTF2Ydzz28%2BNflv0%3D'; ?>" alt="Image du voiture">
             <!-- Afficher l'image du voiture depuis Blob Storage -->
         </div>
     </body>
