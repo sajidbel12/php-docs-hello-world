@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form action="logicLogin.php" method="post">
+    <form action="loginWork.php" method="post">
         <h2>Connexion</h2>
         <label for="username">Nom d'utilisateur :</label>
         <input type="text" id="username" name="username" required>
