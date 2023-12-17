@@ -1,18 +1,17 @@
 <?php
 include 'db.php'; // Include the database connection file
 
-// Récupérer le nom du médecin à partir des paramètres de requête
-$medecinName = $_GET['carName'];
+$carmm = $_GET['carName'];
 
-// Exécuter une requête pour obtenir les détails du médecin
+
 $sql = "SELECT carName, disponibilite, imagePath FROM car_ WHERE carName = :carn";
 $stmt = $conn->prepare($sql);
-$stmt->bindParam(':carn', $medecinName);
+$stmt->bindParam(':carn', $carmm);
 $stmt->execute();
-$medecin = $stmt->fetch(PDO::FETCH_ASSOC);
+$car = $stmt->fetch(PDO::FETCH_ASSOC);
 
-// Vérifier si le médecin existe
-if ($medecin) {
+
+if ($car) {
     // Output HTML content
     ?>
     <!DOCTYPE html>
@@ -21,7 +20,7 @@ if ($medecin) {
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Détails du Médecin</title>
+        <title>Détails du voiture</title>
         <link rel="stylesheet" href="body.css">
     </head>
    
@@ -30,8 +29,8 @@ if ($medecin) {
             <h1>Détails du Médecin</h1>
             <p>id du médecin: <?php echo $medecin['carName']; ?></p>
             <p>Disponibilité: <?php echo $medecin['disponibilite']; ?></p>
-            <img src="<?php echo $room['imageDoc'] . 'sp=r&st=2023-12-17T15:31:27Z&se=2023-12-20T23:31:27Z&spr=https&sv=2022-11-02&sr=c&sig=4BgaWHaVQHOtKepm6k5dMu41VrtWxLnJaAIsg%2FiK%2Fhw%3D'; ?>" alt="Image du medecin">
-            <!-- Afficher l'image du médecin depuis Blob Storage -->
+            <img src="<?php echo $room['imageDoc'] . 'sp=r&st=2023-12-17T17:19:00Z&se=2023-12-21T01:19:00Z&spr=https&sv=2022-11-02&sr=c&sig=ye5GJdRAGjTlXBoCenOhk5kdz64oTF2Ydzz28%2BNflv0%3D'; ?>" alt="Image du voiture">
+            <!-- Afficher l'image du voiture depuis Blob Storage -->
         </div>
     </body>
    
@@ -39,6 +38,6 @@ if ($medecin) {
     <?php
 } else {
     // Médecin non trouvé, vous pouvez rediriger l'utilisateur ou afficher un message d'erreur
-    echo "Médecin non trouvé.";
+    echo "voiture non trouvé.";
 }
 ?>
