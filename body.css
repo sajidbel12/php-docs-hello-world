@@ -1,6 +1,6 @@
 body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(45deg, #3494E6, #ec6ead);
+    font-family: 'Verdana', sans-serif;
+    background: linear-gradient(45deg, #FFD166, #06D6A0);
     margin: 0;
     padding: 0;
 }
@@ -8,15 +8,15 @@ body {
 div {
     max-width: 600px;
     margin: 50px auto;
-    background-color: #fff;
+    background-color: #F4F4F4;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
     text-align: center;
-    color: #333;
+    color: #2E2E2E;
 }
 
 p {
@@ -24,22 +24,22 @@ p {
 }
 
 button {
-    background-color: #4c84af;
+    background-color: #FF4081;
     color: #fff;
     border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
+    padding: 12px 24px;
+    border-radius: 6px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #4c84af;
+    background-color: #D81B60;
 }
 
 div > div {
     margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    padding: 15px;
+    border: 2px solid #BDBDBD;
+    border-radius: 8px;
+    background-color: #fff;
 }
-
